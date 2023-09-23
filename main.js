@@ -37,3 +37,13 @@ const validateCred = numArray => {
     }
     return sum % 10 === 0;
 }
+
+const findInvalidCards = nestedArray => {
+    const invalidCards = [];
+    nestedArray.forEach(card => {
+        if (!validateCred(card)) {
+            invalidCards.push(card);
+        }
+    });
+    return invalidCards;
+}
