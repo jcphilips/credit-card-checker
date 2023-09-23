@@ -47,3 +47,30 @@ const findInvalidCards = nestedArray => {
     });
     return invalidCards;
 }
+
+const idInvalidCardCompanies = invalidCardsArray => {
+    // create array of company and the first digit of their cards
+    const companyIds = [
+        {name: 'Amex (American Express)', 'First Digit': 3},
+        {name: 'Visa', 'First Digit': 4},
+        {name: 'Mastercard', 'First Digit': 5},
+        {name: 'Discover', 'First Digit': 6},
+    ];
+    
+    const companies = [];
+
+    // TODO: provide list of cards to associated company to fix
+    invalidCardsArray.forEach(card => {
+        if (card[0] < 3 || card[0] > 6) {
+            console.log('Company not found');
+            return;
+        }
+        for (const company of companyIds) {
+           if (!companies.includes(company.name) && company["First Digit"] === card[0]) {
+            companies.push(company.name);
+           }
+        }
+    });
+
+    return companies;
+}
