@@ -74,3 +74,10 @@ const idInvalidCardCompanies = invalidCardsArray => {
 
     return companies;
 }
+
+
+// TODO: move test cases and increase test
+
+// TODO: create a function that accepts a string and converts it into an array of number
+
+// Create a function that will convert invalid numbers into valid numbers.
